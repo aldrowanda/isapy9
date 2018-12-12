@@ -16,24 +16,15 @@
 # col_2=str(input("Podaj tekst kolumny nr 2 "))
 # col_3=str(input("Podaj tekst kolumny nr 3 "))
 
-lista= ['c', 'co', "col"]
+lista= ["c", 'co', "col"]
 
-print("+", end="")
-for element in (lista):
-    for litera in element:
-        print("-", sep="s", end="")
-    print("+", end="")
-print()
+for element in lista:
+    szer = len(element)
+    wys = 1
+    print('+'+"-"*int(szer)+'+', end='')
+for element in lista:
+        szer = len(element)
+        wys = 1
+        print((('|'+"{}".format(element)+'|'+'\n')*int(wys)), end='')
 
-print("|", end="")
-for element in (lista):
-    print( element, end="")
-    print("|", end="")
-print()
-
-print("+", end="")
-for element in (lista):
-    for litera in element:
-        print("-", end="")
-    print("+", end="")
-print()
+print('+'+"-"*int(szer)+'+')
